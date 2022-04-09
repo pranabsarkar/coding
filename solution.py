@@ -7,6 +7,9 @@ def decodeBinarySeq(binarySeq):
     if len(binarySeq) > 24:
         return invalid
 
+    if len(binarySeq) % 2 != 0:
+        return invalid
+
     mapping = {
         "00": "C",
         "01": "G",
@@ -24,7 +27,7 @@ def decodeBinarySeq(binarySeq):
 
     return result
 
-print(decodeBinarySeq("00011011"))
+print(decodeBinarySeq("000110110"))
 
 
     
