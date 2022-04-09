@@ -18,10 +18,13 @@ def decodeBinarySeq(binarySeq):
     result = ""
 
     for i in range(0, len(binarySeq), 2):
-        result += mapping[binarySeq[i]+binarySeq[i+1]]
+        if binarySeq[i] in ("0", "1") and binarySeq[i+1] in ("0", "1"):
+            result += mapping[binarySeq[i]+binarySeq[i+1]]
+        return invalid
 
     return result
 
+print(decodeBinarySeq("00011011"))
 
 
     
