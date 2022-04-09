@@ -27,7 +27,3 @@ def decodeBinarySeq(binarySeq):
 
     return result
 
-print(decodeBinarySeq("000110110"))
-
-
-    
