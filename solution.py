@@ -2,10 +2,22 @@
 
 data = int(input())
 
+def getMinSquares(n):
 
-for i in range(1, 30):
-    for j in range(1, 30):
-        if data % (i * i * i * i) * j == 0:
-            print(j)
-print(1)
+	if n <= 3:
+		return n
+	res = n
+
+	for x in range(1, n + 1):
+		temp = x * x
+		if temp > n:
+			break
+		else:
+			res = min(res, 1 + getMinSquares(n
+								- temp))
+	return res
+
+# Driver code
+print(getMinSquares(data))
+
 
